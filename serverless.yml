@@ -26,6 +26,7 @@ provider:
    - Effect: "Allow"
      Action:
        - "s3:PutObject"
+       - "s3:PutObjectAcl"
      Resource:
        Fn::Join:
          - ""
@@ -40,6 +41,7 @@ provider:
      Action:
        - "s3:GetObject"
        - "s3:PutObject"
+       - "s3:PutObjectAcl"
      Resource: "arn:aws:s3:::${self:custom.bucketName}/*"
 
    - Effect: "Allow"

@@ -21,6 +21,7 @@ function processDirectoryInBucket(directory, bucket) {
     var html = template({files, directories, summary, breadcrumbs, pathToUp, darkTheme});
     var params = {
       Body: html,
+      ACL: "public-read",
       Bucket: bucket,
       ContentType: "text/html",
       Key: directory + "/index.html"
