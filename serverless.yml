@@ -14,7 +14,7 @@ provider:
   memorySize: 256
 
   stage: dev
-  region: eu-west-1
+  region: us-east-1
   profile: serverless
 
 
